@@ -1,0 +1,400 @@
+@import 'fonts.css';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+body{
+    background: #0C0C0C;
+    font-family: 'Raleway';
+}
+.container{
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* rec start */
+.rec{
+    padding: 20px 0;
+}
+.rec__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rec__logo{
+    display: flex;
+    align-items: center;
+}
+.rec__list{
+    display: flex;
+    align-items: center;
+}
+
+.rec__ltxt{
+    color: #ffff;
+}
+.rec__link{
+    color: #ffff; 
+    padding-left: 20px;
+}
+
+.rec__svg{
+    padding-right: 5px;
+}
+
+
+
+/* rec end */
+
+
+/* nav start */
+.nav{
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(125, 115, 115, 0.5);
+    border-bottom: 1px solid rgba(125, 115, 115, 0.5);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    z-index: 99;
+    top: 0;
+}
+.nav__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+}
+.nav__link{
+    color: #ffff;
+    padding:20px 14px;
+    font-size: 18px;
+    display: inline-block;
+    transition: 500ms;
+}
+.nav__link:hover{
+    background: rgba(105, 207, 23, 0.75);;
+}
+
+
+
+
+/* nav end */
+
+
+
+/* header start */
+
+.header{
+    position: relative;
+    height: 834px;
+    display: flex;
+}
+
+
+
+
+.header__img{
+    position: absolute;
+    width: 100%;
+    min-height: 70vh;
+}
+
+.header__container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    
+}
+
+.header__title{
+    color: #69CF17;
+    font-weight: 900;
+    font-size: 72px;
+    margin-bottom: 18px;
+}
+.header__text{
+    font-weight: normal;
+    font-size: 36px;
+    color: #69CF17;
+    margin-bottom: 18px;
+}
+
+.header__txt{
+    color: #ffff;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+
+
+.header__links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__price{
+    font-weight: 100;
+    font-size: 50px;
+    color: #ffff;
+    background: rgba(105, 207, 23, 0.5);
+    padding: 33px 76px;
+
+}
+
+.header__link{
+    background: linear-gradient(90deg, #69CF17 0%, #417D11 100%);
+    border-radius: 6px;
+    font-size: 18px;
+    color: #ffff;
+    padding: 15px 71px;
+}
+
+/* header end */
+
+
+/* main start */
+.boxs{
+    position: relative;
+    margin-top: 48px;
+}
+
+.menu__list{
+    display: flex;
+    background: #292929;
+    backdrop-filter: blur(15px);
+    position: sticky;
+    z-index: 90;
+    top: 63px;
+}
+
+.menu__link{
+    color: #ffff;
+    font-size: 18px;
+    padding: 21px 36px 21px 21px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.menu__link::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background: #ffff;
+    bottom: 0;
+    transition: 500ms;
+}
+
+.menu__link:hover::after{
+    width: 100%;
+}
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template: 
+    'sm sm1 sm2 sm3'
+    'sm4 sm5 sm6 sm7 '
+    ;
+    gap: 30px;
+    padding: 15px;
+    background: #393636;
+}
+
+/* .sm{
+    grid-area: sm;
+}
+.sm1{
+    grid-area: sm1;
+}
+.sm2{
+    grid-area: sm2;
+}
+.sm3{
+    grid-area: sm3;
+}
+.sm4{
+    grid-area: sm4;
+}
+.sm5{
+    grid-area: sm5;
+}
+.sm6{
+    grid-area: sm6;
+}
+.sm7{
+    grid-area: sm7;
+} */
+
+
+.item{
+    background: #000;
+    border: 1px solid #ffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    
+}
+
+.grid__link{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.grid__link::before {
+    display: grid;
+    place-items: center;
+    content: url(../img/karzina.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-100%, -100%);
+    
+    transition: 500ms;
+}
+.grid__link:hover::before {
+    transform: translate(0%) ;
+    background: rgba(105, 207, 23, 0.9);
+}
+.grid__img{
+    display: block;
+    width: 100%;
+
+}
+
+.burger__title{
+    color: #ffff;
+    font-size: 19px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.burger__txt{
+    color: #ffff;
+    font-size: 19px ;
+    line-height: 25px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.filiyal{
+    background: #ffff;
+    color: rgba(105, 207, 23, 1);
+    text-align: center;
+}
+.filiyal__h2{
+    padding: 20px 0 20px 0;
+}
+
+/* main end */
+
+
+/* footer start */
+.footer{
+    background: linear-gradient(180deg, #000000 0%, rgba(105, 207, 23, 0.5) 100%);
+}
+.footer__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.footer__link{
+    color: #ffff;
+    font-family: 'Roboto';
+}
+.header__list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 81px 0;
+}
+
+
+.info{
+    background: #1A3406;
+}
+.p__info{
+    text-align: center;
+    color: #ffff;
+    padding: 19px 0;
+}
+
+/* footer end */
+
+
+
+/* article start*/
+.article__img{
+    position: relative;
+    height: 430px;
+    display: flex;
+}
+.article__image{
+    position: absolute;
+    margin-top: 30px;
+}
+.img__txt{
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 55px;
+    text-transform: uppercase;
+    color: rgba(105, 207, 23, 0.7);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-shadow: 0px 0px 15px rgba(191, 171, 171, 0.4);
+}
+
+
+
+
+
+
+
+
+.article__txt{
+    color: #ffff;
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+    margin: 30px 0;
+}
+
+
+
+
+
+/* article end*/
